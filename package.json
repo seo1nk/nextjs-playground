@@ -1,31 +1,36 @@
 {
-  "name": "nodejs-template",
+  "name": "nextjs-playground",
   "version": "0.1.0",
-  "description": "server-side nodejs template",
+  "description": "",
   "license": "MIT",
-  "engines": {
-    "node": "18.x"
-  },
   "type": "module",
   "scripts": {
-    "dev": "ts-node src/index.ts",
-    "start": "node dist/src/index.js",
-    "build": "tsc",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "format": "yarn eslint:fix && yarn prettier:fix",
     "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix .",
-    "prettier:fix": "prettier --check --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|css|scss|json|md)\"",
-    "format": "yarn eslint:fix && yarn prettier:fix"
+    "prettier:fix": "prettier --check --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|css|scss|json|md)\""
   },
   "dependencies": {
-    "typescript": "^5.0.0"
+    "next": "^13.5.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "eslint": "^8.35.0",
+    "@types/node": "^20.8.3",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.11",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.51.0",
+    "eslint-config-next": "^13.5.4",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.2",
-    "ts-node": "^10.9.1"
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }

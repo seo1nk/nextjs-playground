@@ -1,20 +1,25 @@
 /* eslint prettier/prettier: off */
 module.exports = {
   env: {
-    commonjs: true,
+    browser: true,
     es2022: true,
   },
   parser: "@typescript-eslint/parser",
   extends: [
+    "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "eslint-config-prettier",
   ],
   parserOptions: {
     ecmaVersion: 2022,
+    ecmaFeatures: {
+      jsx: true,
+    },
     sourceType: "module",
   },
-  plugins: ["eslint-plugin-prettier"],
+  plugins: ["react", "eslint-plugin-prettier", "import", "prettier"],
   rules: {
     semi: ["error", "never"],
     quotes: ["error", "double"],
@@ -37,6 +42,12 @@ module.exports = {
         trailingComma: "all",
       },
     ],
+    "react/react-in-jsx-scope": "off",
     "nonblock-statement-body-position": "error",
+  },
+  settings: {
+    react: {
+      version: "18.2.0",
+    },
   },
 }

@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ES2022",
+    "module": "esnext",
     "target": "ES2022",
-    "moduleResolution": "node",
-    "outDir": "./dist",
+    "lib": ["dom", "dom.iterable", "esnext", "ES2022"],
+    "jsx": "preserve",
     "sourceMap": true,
+    "outDir": "./dist",
     "strict": true,
+    "moduleResolution": "node",
     "baseUrl": "./",
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -25,6 +27,6 @@
     "noEmit": true,
     "isolatedModules": true
   },
-  "include": ["./src/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }
