@@ -2,12 +2,7 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "ES2022",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "ES2022"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext", "ES2022"],
     "jsx": "preserve",
     "sourceMap": true,
     "outDir": "./dist",
@@ -37,14 +32,6 @@
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
