@@ -1,0 +1,15 @@
+services:
+  node:
+    container_name: node
+    tty: true
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - type: bind
+        source: "."
+        target: "/app"
+    environment:
+      - WATCHPACK_POLLING=true
+    ports:
+      - 3000:3000

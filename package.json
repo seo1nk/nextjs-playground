@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-template",
+  "version": "0.1.0",
+  "description": "server-side nodejs template",
+  "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/src/index.js",
+    "build": "tsc",
+    "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix .",
+    "prettier:fix": "prettier --check --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|css|scss|json|md)\"",
+    "format": "yarn eslint:fix && yarn prettier:fix"
+  },
+  "dependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.2",
+    "ts-node": "^10.9.1"
+  }
+}
